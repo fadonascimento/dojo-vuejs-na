@@ -1,112 +1,160 @@
 <template>
-  <div class="hello">
-    <section class="hero is-primary">
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title">
-            NA BOOK Exchange - Dojo Vue.js
-          </h1>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col box">
+        <div class="box__wrapper">
+          <header class="l-header">
+            <img src="../assets/logo.png">
+          </header>
+          <div class="media">
+            <img class="d-flex mr-3" src="https://dummyimage.com/150x150.png" alt="Generic placeholder image">
+            <div class="media-body">
+              <h5 class="mt-0">Parmegiana</h5>
+              <div>R$ 19,90</div>
+              <p>Parmegiana de fillet mignon</p>
+              <button class="btn btn-secondary">Incluir no Pedido</button>
+            </div>
+          </div>
+
+          <div class="media">
+            <img class="d-flex mr-3" src="https://dummyimage.com/150x150.png" alt="Generic placeholder image">
+            <div class="media-body">
+              <h5 class="mt-0">Parmegiana</h5>
+              <div>R$ 19,90</div>
+              <p>Parmegiana de fillet mignon</p>
+              <button class="btn btn-secondary">Incluir no Pedido</button>
+            </div>
+          </div>
+
+          <div class="media">
+            <img class="d-flex mr-3" src="https://dummyimage.com/150x150.png" alt="Generic placeholder image">
+            <div class="media-body">
+              <h5 class="mt-0">Parmegiana</h5>
+              <div>R$ 19,90</div>
+              <p>Parmegiana de fillet mignon</p>
+              <button class="btn btn-secondary">Incluir no Pedido</button>
+            </div>
+          </div>
+
+
         </div>
       </div>
-    </section>
-
-    <div class="container books-list">
-      <div class="columns">
-        <div class="column is-3 is-offset-7">
-          <div class="field has-addons">
-            <div class="control">
-              <input class="input" type="text" placeholder="Find a repository">
+      <div class="col-3 box">
+        <div class="box__wrapper">
+          <header class="l-header">
+            <h2>Seu pedido</h2>
+          </header>
+          <div class="row">
+            <div class="col">
+              <p>Parmegiana</p>
             </div>
-            <div class="control">
-              <a class="button is-info">
-                Search
-              </a>
+            <div class="col">
+              <p class="text-right">R$ 19,90</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <p>Parmegiana</p>
+            </div>
+            <div class="col">
+              <p class="text-right">R$ 19,90</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <p>Parmegiana</p>
+            </div>
+            <div class="col">
+              <p class="text-right">R$ 19,90</p>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col">
+              <p>Total</p>
+            </div>
+            <div class="col">
+              <p class="text-right">R$ 209,90</p>
             </div>
           </div>
         </div>
-        <div class="column">
-          <button class="button is-link">Cadastrar Livro</button>
-        </div>
       </div>
-
-      <div class="columns is-multiline is-mobile">
-        <div class="column is-one-quarter">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Image">
-              </figure>
-            </div>
-            <div class="card-content">
-              <p class="title is-4">Clean Code</p>
-              <p class="subtitle is-6">Owner: @gmanara</p>
-              <div class="level">
-                <button class="button is-info">Detalhes</button>
-                <button class="button is-primary">Emprestar</button>
+      <div class="col box">
+        <div class="box__wrapper">
+          <header class="l-header">
+            <h2>Inventário</h2>
+          </header>
+          <div class="product">
+            <div class="form-control">
+              <div class="form-inline">
+                <input type="text" class="form-control col-md-4" id="inlineFormInput" placeholder="Nome do Prato">
+                <input type="text" class="form-control col-md-4" id="inlineFormInput" placeholder="Preço">
+                <select class="custom-select col-md-4" id="inlineFormCustomSelect">
+                  <option value="1">Disponível</option>
+                  <option value="2">Indisponível</option>
+                </select>
               </div>
+              <input type="text" class="form-control" id="inlineFormInput" placeholder="URL da Imagem">
+              <button class="btn btn-secondary btn-block">Remover item</button>
             </div>
-          </div>
-        </div>
-        <div class="column is-one-quarter">
-          <div class="card">
-            <div class="card-image">
-              <figure class="image is-4by3">
-                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Image">
-              </figure>
-            </div>
-            <div class="card-content">
-              <p class="title is-4">Clean Code</p>
-              <p class="subtitle is-6">Owner: @gmanara</p>
-              <p class="button is-text is-danger">Unavailable</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+            <hr>
 
-    <div class="container book-details">
-      <article class="media">
-        <figure class="media-left">
-          <p class="image is-300x300">
-            <img src='https://dummyimage.com/300x300.png' alt=''/>
-          </p>
-        </figure>
-        <div class="media-content">
-          <div class="content">
-            <p class="title is-4">Clean Code</p>
-            <p class="title is-5">Owner: @gmanara</p>
-            <p class="subtitle is-5">Borrowed: @fpulzi</p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
-            </p>
-            <div class="is-pulled-right">
-              <button class="button is-primary">Emprestar</button>
+            <div class="form-control">
+              <div class="form-inline">
+                <input type="text" class="form-control col-md-4" id="inlineFormInput" placeholder="Nome do Prato">
+                <input type="text" class="form-control col-md-4" id="inlineFormInput" placeholder="Preço">
+                <select class="custom-select col-md-4" id="inlineFormCustomSelect">
+                  <option value="1">Disponível</option>
+                  <option value="2">Indisponível</option>
+                </select>
+              </div>
+              <input type="text" class="form-control" id="inlineFormInput" placeholder="URL da Imagem">
+              <button class="btn btn-secondary btn-block">Remover item</button>
             </div>
-          </div>
-        </div>
-      </article>
-    </div>
+            <hr>
 
-    <div class="container book-add">
-      <div class="field is-horizontal">
-        <div class="field-body">
-          <div class="field">
-            <p class="control is-expanded">
-              <input class="input" type="text" placeholder="Titulo">
-            </p>
-          </div>
-          <div class="field">
-            <p class="control is-expanded">
-              <input class="input" type="text" placeholder="Autor">
-            </p>
-          </div>
-          <div class="field">
-            <p class="control is-expanded">
-              <input class="input" type="text" placeholder="Name">
-            </p>
+            <div class="form-control">
+              <div class="form-inline">
+                <input type="text" class="form-control col-md-4" id="inlineFormInput" placeholder="Nome do Prato">
+                <input type="text" class="form-control col-md-4" id="inlineFormInput" placeholder="Preço">
+                <select class="custom-select col-md-4" id="inlineFormCustomSelect">
+                  <option value="1">Disponível</option>
+                  <option value="2">Indisponível</option>
+                </select>
+              </div>
+              <input type="text" class="form-control" id="inlineFormInput" placeholder="URL da Imagem">
+              <button class="btn btn-secondary btn-block">Remover item</button>
+            </div>
+            <hr>
+
+            <div class="form-control">
+              <div class="form-inline">
+                <input type="text" class="form-control col-md-4" id="inlineFormInput" placeholder="Nome do Prato">
+                <input type="text" class="form-control col-md-4" id="inlineFormInput" placeholder="Preço">
+                <select class="custom-select col-md-4" id="inlineFormCustomSelect">
+                  <option value="1">Disponível</option>
+                  <option value="2">Indisponível</option>
+                </select>
+              </div>
+              <input type="text" class="form-control" id="inlineFormInput" placeholder="URL da Imagem">
+              <button class="btn btn-secondary btn-block">Remover item</button>
+            </div>
+            <hr>
+
+            <div class="form-control">
+              <div class="form-inline">
+                <input type="text" class="form-control col-md-4" id="inlineFormInput" placeholder="Nome do Prato">
+                <input type="text" class="form-control col-md-4" id="inlineFormInput" placeholder="Preço">
+                <select class="custom-select col-md-4" id="inlineFormCustomSelect">
+                  <option value="1">Disponível</option>
+                  <option value="2">Indisponível</option>
+                </select>
+              </div>
+              <input type="text" class="form-control" id="inlineFormInput" placeholder="URL da Imagem">
+              <button class="btn btn-secondary btn-block">Remover item</button>
+            </div>
+            <hr>
+            <button class="btn btn-primary btn-block">Adicionar item</button>
           </div>
         </div>
       </div>

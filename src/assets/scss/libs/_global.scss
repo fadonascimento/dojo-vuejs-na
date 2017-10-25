@@ -1,19 +1,42 @@
-@import "~bulma/sass/utilities/initial-variables";
-@import "~bulma/sass/utilities/_all";
-@import "~bulma/sass/base/_all";
-@import "~bulma/sass/elements/_all";
-@import "~bulma/sass/components/_all";
-@import "~bulma/sass/grid/_all";
-@import "~bulma/sass/layout/_all";
+@import "bootstrap/bootstrap.scss";
 
 
-.card {
-  height: 100%;
+%line {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: solid 2px #000;
+}
+
+.l-header {
+  text-align: center;
+  @extend %line;
+}
+
+.box {
+  border: 5px solid #000;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 5px solid #000;
+  }
+
+  &__wrapper {
+    padding: 10px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 94vh;
+  }
 }
 
 
-.books-list,
-.book-details,
-.book-add {
-  margin-top: 40px;
+.media {
+  @extend %line;
 }
