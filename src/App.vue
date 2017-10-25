@@ -11,5 +11,10 @@ export default {
 </script>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css?family=Bitter:400,700');
+
+body {
+  font-family: 'Bitter', serif;
+}
 
 </style>
