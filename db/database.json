@@ -1,0 +1,18 @@
+{
+  "item" : {
+    "-KigM1O5pWxJOd8RCOxX" : {
+      "id": "342",
+      "name" : "Big tasty",
+      "description" : "Delicioso lanche com hamburger caseiro  2",
+      "price" : "39,90",
+      "status": 1
+    },
+    "-KigQUdwposixQOW7k52" : {
+      "id": "343",
+      "name" : "Quarteira",
+      "description" : "Delicioso lanche com hamburger caseiro e",
+      "price" : "19,90",
+      "status": 0
+    }
+  }
+}
