@@ -8,8 +8,10 @@
         <input class="form-control" placeholder="Pesquise por prato" type="text">
       </div>
       <div v-for="item in items" class="media">
-        <img class="d-flex mr-3" src="https://dummyimage.com/150x150.png" alt="Generic placeholder image">
-        <div class="media-body">
+        <div class="col-4 media-image" :style="{ 'background-image': 'url(' + item.url + ')'}">
+
+        </div>
+        <div class="col-8 media-body">
           <h5 class="mt-0">{{ item.name }} <span v-if="!item.status" class="badge badge-secondary">Indisponível</span></h5>
           <div>{{ item.price }}</div>
           <p>{{ item.description }}</p>
@@ -38,3 +40,11 @@
     }
   }
 </script>
+
+<style lang="scss" scoped>
+.media-image {
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+}
+</style>

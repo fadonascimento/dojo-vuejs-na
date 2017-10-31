@@ -1,18 +1,20 @@
 {
   "item" : {
-    "-KigM1O5pWxJOd8RCOxX" : {
+    "0": {
       "id": "342",
       "name" : "Big tasty",
       "description" : "Delicioso lanche com hamburger caseiro  2",
       "price" : "39,90",
-      "status": 1
+      "status": 1,
+      "url": "https://s3.amazonaws.com/academiadacarne/content/1931-bife-a-parmegiana-de-forno.jpg"
     },
-    "-KigQUdwposixQOW7k52" : {
+    "1" : {
       "id": "343",
       "name" : "Quarteira",
       "description" : "Delicioso lanche com hamburger caseiro e",
       "price" : "19,90",
-      "status": 0
+      "status": 0,
+      "url": "https://s3.amazonaws.com/academiadacarne/content/1931-bife-a-parmegiana-de-forno.jpg"
     }
   }
 }

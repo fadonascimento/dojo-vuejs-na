@@ -5,29 +5,28 @@
         <h2>Inventário</h2>
       </header>
       <div class="product">
-
-        <div class="form-group" v-for="item in items">
+        <div class="form-group" v-for="(item, key) in items" v-bind:key="key">
           <div class="form-inline">
-            <input :value="item.name" type="text" class="form-control col-md-4" placeholder="Nome do Prato">
-            <input type="text" class="form-control col-md-4" id="inlineFormInput" placeholder="Preço">
-            <select class="custom-select col-md-4" id="inlineFormCustomSelect">
+            <input :value="item.name" @input="updateName(key, $event)" type="text" class="form-control col-md-4" placeholder="Nome do Prato">
+            <input :value="item.price" @input="updatePrice(key, $event)" type="text" class="form-control col-md-4" id="inlineFormInput" placeholder="Preço">
+            <select :value="item.status" @input="updateStatus(key, $event)" class="custom-select col-md-4">
               <option value="1">Disponível</option>
-              <option value="2">Indisponível</option>
+              <option value="0">Indisponível</option>
             </select>
           </div>
-          <input type="text" class="form-control" id="inlineFormInput" placeholder="URL da Imagem">
-          <button class="btn btn-secondary btn-block">Remover item</button>
+          <input :value="item.url" @input="updateUrl(key, $event)" type="text" class="form-control" placeholder="URL da Imagem">
+          <button class="btn btn-secondary btn-block" v-on:click="removeItem(key)">Remover item</button>
         </div>
         <hr>
 
-        <button class="btn btn-primary btn-block">Adicionar item</button>
+        <button class="btn btn-primary btn-block" v-on:click="addItem()">Adicionar item</button>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-  import { mapGetters } from 'vuex';
+  import { mapGetters, mapMutations } from 'vuex';
 
   export default {
     computed: {
@@ -35,5 +34,25 @@
         items: 'GET_ITEMS',
       }),
     },
+    methods: {
+      updateName(key, e) {
+        this.$store.commit('UPDATE_ITEM_NAME', [key, e]);
+      },
+      updatePrice(key, e) {
+        this.$store.commit('UPDATE_ITEM_PRICE', [key, e]);
+      },
+      updateStatus(key, e) {
+        this.$store.commit('UPDATE_ITEM_STATUS', [key, e]);
+      },
+      updateUrl(key, e) {
+        this.$store.commit('UPDATE_ITEM_URL', [key, e]);
+      },
+      removeItem(key) {
+        this.$store.commit('REMOVE_ITEM', key);
+      },
+      addItem() {
+        this.$store.commit('ADD_ITEM');
+      }
+    }
   }
 </script>
