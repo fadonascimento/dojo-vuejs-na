@@ -8,7 +8,7 @@
         <div class="form-group" v-for="(item, key) in items" v-bind:key="key">
           <div class="form-inline">
             <input :value="item.name" @input="updateName(key, $event)" type="text" class="form-control col-md-4" placeholder="Nome do Prato">
-            <input :value="item.price" @input="updatePrice(key, $event)" type="text" class="form-control col-md-4" id="inlineFormInput" placeholder="Preço">
+            <input :value="item.price" @input="updatePrice(key, $event)" type="number" class="form-control col-md-4" id="inlineFormInput" placeholder="Preço">
             <select :value="item.status" @input="updateStatus(key, $event)" class="custom-select col-md-4">
               <option value="1">Disponível</option>
               <option value="0">Indisponível</option>
