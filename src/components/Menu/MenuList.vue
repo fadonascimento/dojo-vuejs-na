@@ -7,7 +7,7 @@
       <div class="form-group">
         <input class="form-control" placeholder="Pesquise por prato" type="text">
       </div>
-      <div v-for="item in items" class="media">
+      <div v-for="(item, key) in items" class="media" :key="key">
         <div class="col-4 media-image" :style="{ 'background-image': 'url(' + item.url + ')'}">
 
         </div>
