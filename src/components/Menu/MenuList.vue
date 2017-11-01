@@ -2,7 +2,7 @@
   <div class="col box">
     <div class="box__wrapper">
       <header class="l-header">
-        <img src="../../assets/logo.png">
+        <h2>Central Perk Café</h2>
       </header>
       <div class="form-group">
         <input class="form-control" placeholder="Pesquise por prato" type="text">
