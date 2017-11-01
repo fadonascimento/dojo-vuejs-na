@@ -14,6 +14,7 @@ export default {
   'REMOVE_ORDER_ITEM' (state, key) {
     state.order.splice(key,1);
   },
+  // @Todo think if maybe we can DRY THIS
   'UPDATE_ITEM_NAME' (state, params) {
     state.item[params[0]].name = params[1].target.value;
   },
@@ -25,6 +26,9 @@ export default {
   },
   'UPDATE_ITEM_URL' (state, params) {
     state.item[params[0]].url = params[1].target.value;
+  },
+  'UPDATE_ITEM_DESCRIPTION'(state, params) {
+    state.item[params[0]].description = params[1].target.value;
   },
   'REMOVE_ITEM' (state, key) {
     Vue.delete(state.item, key)
@@ -39,7 +43,5 @@ export default {
       url: '',
     };
     Vue.set(state.item, [Object.keys(state.item).length], newItem)
-    console.log(state.item);
-    // Vue.delete(state.item, key)
   },
 }
