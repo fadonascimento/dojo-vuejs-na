@@ -10,8 +10,8 @@
             <input :value="item.name" @input="updateName(key, $event)" type="text" class="form-control col-md-4" placeholder="Item name">
             <input :value="item.price" @input="updatePrice(key, $event)" type="number" class="form-control col-md-4" placeholder="Price">
             <select :value="item.status" @input="updateStatus(key, $event)" class="custom-select col-md-4">
-              <option value="1">Disponível</option>
-              <option value="0">Indisponível</option>
+              <option value="1">Available</option>
+              <option value="0">Not Available</option>
             </select>
           </div>
           <textarea :value="item.description" @input="updateDescription(key, $event)" class="form-control"></textarea>
