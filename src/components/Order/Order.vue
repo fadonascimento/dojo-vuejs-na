@@ -18,7 +18,7 @@
           <p>Total</p>
         </div>
         <div class="col">
-          <p class="text-right">R$ 209,90</p>
+          <p class="text-right">R$ {{ price }}</p>
         </div>
       </div>
     </div>
@@ -32,7 +32,8 @@ import store from '@/store/store';
 export default {
   computed: {
     ...mapGetters({
-      order: 'GET_ORDER'
+      order: 'GET_ORDER',
+      price: 'GET_ORDER_PRICE'
     }),
   },
   methods: {
