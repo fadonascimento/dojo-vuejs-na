@@ -5,7 +5,7 @@
         <h2>Central Perk Café</h2>
       </header>
       <div class="form-group">
-        <input class="form-control" placeholder="Search" type="text">
+        <input v-model="queryFilter" class="form-control" placeholder="Search" type="text">
       </div>
       <div v-for="(item, key) in items" class="media" :key="key">
         <div class="col-4 media-image" :style="{ 'background-image': 'url(' + item.url + ')'}">
@@ -28,10 +28,15 @@
   import store from '@/store/store';
 
   export default {
+    data() {
+      return {
+        queryFilter: ''
+      }
+    },
     computed: {
-      ...mapGetters({
-        items: 'GET_ITEMS',
-      }),
+      items () {
+        return this.$store.getters.getFilteredItems(this.queryFilter);
+      }
     },
     methods: {
       addItem(item) {

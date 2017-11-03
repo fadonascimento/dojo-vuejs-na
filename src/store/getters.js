@@ -1,5 +1,12 @@
 export default {
-  'GET_ITEMS' ({ item }) {
+  getFilteredItems: ({item}) => (params) => {
+    if (!params) return item
+
+    return item.filter(item => {
+      return item.name.toLowerCase().includes(params)
+    })
+  },
+  'GET_ITEMS' ({ item, params }) {
     return item;
   },
   'GET_ORDER' ({ order }) {
