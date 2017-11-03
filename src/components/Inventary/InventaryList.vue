@@ -21,21 +21,30 @@
         <hr>
 
         <button class="btn btn-primary btn-block" v-on:click="addItem()">Adicionar item</button>
+        <button class="btn btn-success btn-block" v-if="hasChange" v-on:click="saveInventary()">
+            Salvar alterações
+            <icon v-if="isLoading" name="circle-o-notch" spin></icon>
+        </button>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-  import { mapGetters, mapMutations } from 'vuex';
+  import { mapGetters, mapMutations, mapActions } from 'vuex';
 
   export default {
     computed: {
       ...mapGetters({
         items: 'GET_ITEMS',
+        hasChange: 'GET_HAS_CHANGE',
+        isLoading: 'GET_LOADING'
       }),
     },
     methods: {
+      ...mapActions({
+        saveInventary: 'POST_ITEMS',
+      }),
       updateName(key, e) {
         this.$store.commit('UPDATE_ITEM_NAME', [key, e]);
       },

@@ -14,5 +14,11 @@ export default {
       price += parseFloat(orderItem.price);
     });
     return price.toFixed(2);
+  },
+  'GET_HAS_CHANGE' (state) {
+    return state.hasChange;
+  },
+  'GET_LOADING' (state) {
+    return state.isLoading;
   }
 }

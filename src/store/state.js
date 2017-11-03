@@ -1,4 +1,6 @@
 export default {
   item: {},
-  order: []
+  order: [],
+  hasChange: false,
+  isLoading: false
 };
