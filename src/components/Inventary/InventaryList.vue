@@ -2,27 +2,27 @@
   <div class="col box">
     <div class="box__wrapper">
       <header class="l-header">
-        <h2>Inventário</h2>
+        <h2>Inventory</h2>
       </header>
       <div class="product">
         <div class="form-group" v-for="(item, key) in items" v-bind:key="key">
           <div class="form-inline">
-            <input :value="item.name" @input="updateName(key, $event)" type="text" class="form-control col-md-4" placeholder="Nome do Prato">
-            <input :value="item.price" @input="updatePrice(key, $event)" type="number" class="form-control col-md-4" id="inlineFormInput" placeholder="Preço">
+            <input :value="item.name" @input="updateName(key, $event)" type="text" class="form-control col-md-4" placeholder="Item name">
+            <input :value="item.price" @input="updatePrice(key, $event)" type="number" class="form-control col-md-4" placeholder="Price">
             <select :value="item.status" @input="updateStatus(key, $event)" class="custom-select col-md-4">
               <option value="1">Disponível</option>
               <option value="0">Indisponível</option>
             </select>
           </div>
           <textarea :value="item.description" @input="updateDescription(key, $event)" class="form-control"></textarea>
-          <input :value="item.url" @input="updateUrl(key, $event)" type="text" class="form-control" placeholder="URL da Imagem">
-          <button class="btn btn-secondary btn-block" v-on:click="removeItem(key)">Remover item</button>
+          <input :value="item.url" @input="updateUrl(key, $event)" type="text" class="form-control" placeholder="URL of image">
+          <button class="btn btn-secondary btn-block" v-on:click="removeItem(key)">Remove item</button>
         </div>
         <hr>
 
-        <button class="btn btn-primary btn-block" v-on:click="addItem()">Adicionar item</button>
+        <button class="btn btn-primary btn-block" v-on:click="addItem()">Add item</button>
         <button class="btn btn-success btn-block" v-if="hasChange" v-on:click="saveInventary()">
-            Salvar alterações
+            Save changes
             <icon v-if="isLoading" name="circle-o-notch" spin></icon>
         </button>
       </div>

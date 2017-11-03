@@ -5,17 +5,17 @@
         <h2>Central Perk Café</h2>
       </header>
       <div class="form-group">
-        <input class="form-control" placeholder="Pesquise por prato" type="text">
+        <input class="form-control" placeholder="Search" type="text">
       </div>
       <div v-for="(item, key) in items" class="media" :key="key">
         <div class="col-4 media-image" :style="{ 'background-image': 'url(' + item.url + ')'}">
 
         </div>
         <div class="col-8 media-body">
-          <h5 class="mt-0">{{ item.name }} <span v-if="!item.status" class="badge badge-secondary">Indisponível</span></h5>
+          <h5 class="mt-0">{{ item.name }}<span v-if="!item.status" class="badge badge-secondary">Not Available</span></h5>
           <div>{{ item.price }}</div>
           <p>{{ item.description }}</p>
-          <button class="btn btn-secondary" v-on:click="addItem(item)">Incluir no Pedido</button>
+          <button class="btn btn-secondary" v-if="item.status" v-on:click="addItem(item)">Add to Cart</button>
         </div>
       </div>
     </div>

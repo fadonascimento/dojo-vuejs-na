@@ -2,7 +2,7 @@
   <div class="col-3 box">
     <div class="box__wrapper">
       <header class="l-header">
-        <h2>Seu pedido</h2>
+        <h2>Order</h2>
       </header>
       <div v-for="(orderItem, key, index) in order" v-bind:key="orderItem.id" class="row">
         <div class="col">
