@@ -3,7 +3,7 @@ export default {
     if (!params) return item
 
     return item.filter(item => {
-      return item.name.toLowerCase().includes(params)
+      return item.name.includes(params)
     })
   },
   'GET_ITEMS' ({ item, params }) {
